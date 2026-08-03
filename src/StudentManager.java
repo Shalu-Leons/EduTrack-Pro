@@ -14,8 +14,13 @@ public StudentManager() {
 }
     
     public void addStudent(Student student) {
+
     students.add(student);
+
+    saveStudents();
+
     System.out.println("Student added successfully!");
+
 }
 
 public void viewStudents() {
@@ -61,7 +66,7 @@ public boolean updateStudent(int id, String name, int age, String gender,
         student.setAddress(address);
         student.setCgpa(cgpa);
         student.setAttendance(attendance);
-
+        saveStudents();
         return true;
     }
 
@@ -73,6 +78,7 @@ public boolean deleteStudent(int id) {
 
     if (student != null) {
         students.remove(student);
+        saveStudents();
         return true;
     }
 
