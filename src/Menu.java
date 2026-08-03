@@ -1,3 +1,118 @@
+import java.util.Scanner;
+
 public class Menu {
-    
+
+    private Scanner sc = new Scanner(System.in);
+    private StudentManager manager = new StudentManager();
+
+    public void start() {
+
+        int choice;
+
+        do {
+
+            System.out.println("\n==================================");
+            System.out.println("        EDUTRACK PRO");
+            System.out.println("==================================");
+            System.out.println("1. Add Student");
+            System.out.println("2. View Students");
+            System.out.println("3. Search Student");
+            System.out.println("4. Update Student");
+            System.out.println("5. Delete Student");
+            System.out.println("6. Exit");
+            System.out.println("==================================");
+
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    addStudent();
+                    break;
+
+                case 2:
+                    manager.viewStudents();
+                    break;
+
+                case 3:
+                    System.out.println("Search Student - Coming Soon");
+                    break;
+
+                case 4:
+                    System.out.println("Update Student - Coming Soon");
+                    break;
+
+                case 5:
+                    System.out.println("Delete Student - Coming Soon");
+                    break;
+
+                case 6:
+                    System.out.println("Thank you for using EduTrack Pro.");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice!");
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+    private void addStudent() {
+
+    System.out.println("\n===== Add Student =====");
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+    sc.nextLine();
+
+    System.out.print("Enter Name: ");
+    String name = sc.nextLine();
+
+    System.out.print("Enter Age: ");
+    int age = sc.nextInt();
+    sc.nextLine();
+
+    System.out.print("Enter Gender: ");
+    String gender = sc.nextLine();
+
+    System.out.print("Enter Department: ");
+    String department = sc.nextLine();
+
+    System.out.print("Enter Year: ");
+    int year = sc.nextInt();
+    sc.nextLine();
+
+    System.out.print("Enter Email: ");
+    String email = sc.nextLine();
+
+    System.out.print("Enter Phone: ");
+    String phone = sc.nextLine();
+
+    System.out.print("Enter Address: ");
+    String address = sc.nextLine();
+
+    System.out.print("Enter CGPA: ");
+    double cgpa = sc.nextDouble();
+
+    System.out.print("Enter Attendance: ");
+    double attendance = sc.nextDouble();
+
+    Student student = new Student(
+            id,
+            name,
+            age,
+            gender,
+            department,
+            year,
+            email,
+            phone,
+            address,
+            cgpa,
+            attendance
+    );
+
+    manager.addStudent(student);
+}
 }
