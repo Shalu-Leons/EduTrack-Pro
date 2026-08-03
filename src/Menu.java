@@ -44,7 +44,7 @@ public class Menu {
                     break;
 
                 case 5:
-                    System.out.println("Delete Student - Coming Soon");
+                    deleteStudent();
                     break;
 
                 case 6:
@@ -195,6 +195,21 @@ private void updateStudent() {
 
     if (updated) {
         System.out.println("\nStudent updated successfully!");
+    } else {
+        System.out.println("\nStudent not found!");
+    }
+}
+private void deleteStudent() {
+
+    System.out.println("\n========== Delete Student ==========");
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+
+    boolean deleted = manager.deleteStudent(id);
+
+    if (deleted) {
+        System.out.println("\nStudent deleted successfully!");
     } else {
         System.out.println("\nStudent not found!");
     }

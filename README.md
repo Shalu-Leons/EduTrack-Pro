@@ -35,6 +35,12 @@ EduTrack Pro is a Java-based Student Information Management System that helps ma
 - Update student details using Student ID
 - Modify all student information
 - Display success or failure message
+### Features Added
+
+- Delete student using Student ID
+- Remove student from ArrayList
+- Display success or failure message
+
 ## 🛠 Technologies Used
 
 - Java

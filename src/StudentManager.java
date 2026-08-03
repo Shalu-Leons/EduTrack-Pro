@@ -60,5 +60,15 @@ public boolean updateStudent(int id, String name, int age, String gender,
 
     return false;
 }
+public boolean deleteStudent(int id) {
 
+    Student student = searchStudent(id);
+
+    if (student != null) {
+        students.remove(student);
+        return true;
+    }
+
+    return false;
+}
 }
