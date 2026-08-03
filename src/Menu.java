@@ -40,7 +40,7 @@ public class Menu {
                     break;
 
                 case 4:
-                    System.out.println("Update Student - Coming Soon");
+                    updateStudent();
                     break;
 
                 case 5:
@@ -128,6 +128,75 @@ private void searchStudent() {
         student.displayDetails();
     } else {
         System.out.println("Student not found!");
+    }
+}
+private void updateStudent() {
+
+    System.out.println("\n========== Update Student ==========");
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+    sc.nextLine();
+
+    Student student = manager.searchStudent(id);
+
+    if (student == null) {
+        System.out.println("Student not found!");
+        return;
+    }
+
+    System.out.println("\nEnter New Details");
+
+    System.out.print("Name: ");
+    String name = sc.nextLine();
+
+    System.out.print("Age: ");
+    int age = sc.nextInt();
+    sc.nextLine();
+
+    System.out.print("Gender: ");
+    String gender = sc.nextLine();
+
+    System.out.print("Department: ");
+    String department = sc.nextLine();
+
+    System.out.print("Year: ");
+    int year = sc.nextInt();
+    sc.nextLine();
+
+    System.out.print("Email: ");
+    String email = sc.nextLine();
+
+    System.out.print("Phone: ");
+    String phone = sc.nextLine();
+
+    System.out.print("Address: ");
+    String address = sc.nextLine();
+
+    System.out.print("CGPA: ");
+    double cgpa = sc.nextDouble();
+
+    System.out.print("Attendance: ");
+    double attendance = sc.nextDouble();
+
+    boolean updated = manager.updateStudent(
+            id,
+            name,
+            age,
+            gender,
+            department,
+            year,
+            email,
+            phone,
+            address,
+            cgpa,
+            attendance
+    );
+
+    if (updated) {
+        System.out.println("\nStudent updated successfully!");
+    } else {
+        System.out.println("\nStudent not found!");
     }
 }
 }

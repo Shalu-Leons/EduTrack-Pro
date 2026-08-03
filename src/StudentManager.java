@@ -34,5 +34,31 @@ public Student searchStudent(int id) {
 
     return null;
 }
+public boolean updateStudent(int id, String name, int age, String gender,
+                             String department, int year,
+                             String email, String phone,
+                             String address, double cgpa,
+                             double attendance) {
+
+    Student student = searchStudent(id);
+
+    if (student != null) {
+
+        student.setName(name);
+        student.setAge(age);
+        student.setGender(gender);
+        student.setDepartment(department);
+        student.setYear(year);
+        student.setEmail(email);
+        student.setPhone(phone);
+        student.setAddress(address);
+        student.setCgpa(cgpa);
+        student.setAttendance(attendance);
+
+        return true;
+    }
+
+    return false;
+}
 
 }
