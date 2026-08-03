@@ -3,11 +3,16 @@ import java.util.ArrayList;
 public class StudentManager {
 
     private ArrayList<Student> students;
-    private FileManager fileManager = new FileManager();
+private FileManager fileManager;
 
-    public StudentManager() {
-        students = new ArrayList<>();
-    }
+public StudentManager() {
+
+    fileManager = new FileManager();
+
+    students = fileManager.loadStudents();
+
+}
+    
     public void addStudent(Student student) {
     students.add(student);
     System.out.println("Student added successfully!");
