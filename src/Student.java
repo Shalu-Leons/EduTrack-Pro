@@ -132,4 +132,18 @@ public class Student {
     System.out.println("Attendance  : " + attendance + "%");
     System.out.println("=====================================");
 }
+public String toFileString() {
+
+    return id + "," +
+            name + "," +
+            age + "," +
+            gender + "," +
+            department + "," +
+            year + "," +
+            email + "," +
+            phone + "," +
+            address + "," +
+            cgpa + "," +
+            attendance;
+}
 }

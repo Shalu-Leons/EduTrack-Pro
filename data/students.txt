@@ -1,0 +1,2 @@
+101,shalu,20,f,ai ds,2023,shalu@gmail.com,1245,chennai,9.0,99.0
+102,dinesh,22,m,ai ds,2023,dinesh@gmail.com,123468,chennai,9.0,99.0

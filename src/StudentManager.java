@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class StudentManager {
 
     private ArrayList<Student> students;
+    private FileManager fileManager = new FileManager();
 
     public StudentManager() {
         students = new ArrayList<>();
@@ -11,6 +12,7 @@ public class StudentManager {
     students.add(student);
     System.out.println("Student added successfully!");
 }
+
 public void viewStudents() {
 
     if (students.isEmpty()) {
@@ -70,5 +72,10 @@ public boolean deleteStudent(int id) {
     }
 
     return false;
+}
+public void saveStudents() {
+
+    fileManager.saveStudents(students);
+
 }
 }

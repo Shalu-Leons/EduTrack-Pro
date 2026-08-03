@@ -48,6 +48,7 @@ public class Menu {
                     break;
 
                 case 6:
+                    manager.saveStudents();
                     System.out.println("Thank you for using EduTrack Pro.");
                     break;
 
