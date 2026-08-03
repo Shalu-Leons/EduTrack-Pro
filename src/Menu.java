@@ -36,7 +36,7 @@ public class Menu {
                     break;
 
                 case 3:
-                    System.out.println("Search Student - Coming Soon");
+                    searchStudent();
                     break;
 
                 case 4:
@@ -114,5 +114,20 @@ public class Menu {
     );
 
     manager.addStudent(student);
+}
+private void searchStudent() {
+
+    System.out.println("\n========== Search Student ==========");
+
+    System.out.print("Enter Student ID: ");
+    int id = sc.nextInt();
+
+    Student student = manager.searchStudent(id);
+
+    if (student != null) {
+        student.displayDetails();
+    } else {
+        System.out.println("Student not found!");
+    }
 }
 }

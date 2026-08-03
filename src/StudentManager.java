@@ -22,5 +22,17 @@ public void viewStudents() {
         student.displayDetails();
     }
 }
+public Student searchStudent(int id) {
+
+    for (Student student : students) {
+
+        if (student.getId() == id) {
+            return student;
+        }
+
+    }
+
+    return null;
+}
 
 }

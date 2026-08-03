@@ -24,6 +24,12 @@ EduTrack Pro is a Java-based Student Information Management System that helps ma
 - Created Student objects dynamically
 - Stored records in ArrayList
 - Displayed all students using View Students
+
+### Features Added
+- Search student by Student ID
+- Display student details if found
+- Display "Student not found!" for invalid IDs
+
 ## 🛠 Technologies Used
 
 - Java
